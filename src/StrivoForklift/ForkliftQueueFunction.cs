@@ -25,7 +25,7 @@ public class ForkliftQueueFunction
 
     [Function(nameof(ForkliftQueueFunction))]
     public async Task Run(
-        [QueueTrigger("consumethis", Connection = "StorageQueue")] string rawMessage)
+        [QueueTrigger("karl-queue", Connection = "StorageQueue")] string rawMessage)
     {
         _logger.LogInformation("Dequeued raw message: {RawMessage}", rawMessage);
 
